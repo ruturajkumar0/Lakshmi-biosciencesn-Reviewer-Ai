@@ -1,0 +1,73 @@
+:root {
+  --ink: #14211C;
+  --ink-soft: #3D4A44;
+  --paper: #EEF1EC;
+  --paper-raised: #F8FAF7;
+  --line: #C7CFC5;
+  --risk-high: #A8352A;
+  --risk-high-bg: #F5E3E0;
+  --risk-low: #2F6E52;
+  --risk-low-bg: #E1EEE4;
+  --evidence: #A6791E;
+  --evidence-bg: #F3E9D2;
+  --focus: #1C5C46;
+
+  --font-display: "Source Serif 4", "Iowan Old Style", "Georgia", serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+body {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 44px;
+  background-attachment: local;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--evidence-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.wrap {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
