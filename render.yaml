@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rct-reviewer-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
